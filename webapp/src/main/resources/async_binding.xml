@@ -21,7 +21,7 @@
 <bindings
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-    wsdlLocation="hello_world_async.wsdl"
+    wsdlLocation="mdm_async.wsdl"
     xmlns="http://java.sun.com/xml/ns/jaxws">
     <bindings node="wsdl:definitions">
         <enableAsyncMapping>true</enableAsyncMapping>

@@ -1,5 +1,5 @@
 
-package org.apache.hello_world_async_soap_http.types;
+package org.apache.mdm_async_soap_http.types;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the org.apache.hello_world_async_soap_http.types package. 
+ * generated in the org.apache.mdm_async_soap_http.types package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -23,26 +23,26 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.apache.hello_world_async_soap_http.types
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.apache.mdm_async_soap_http.types
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link GreetMeSometimeResponse }
+     * Create an instance of {@link DeviceInfoResponse }
      * 
      */
-    public GreetMeSometimeResponse createGreetMeSometimeResponse() {
-        return new GreetMeSometimeResponse();
+    public DeviceInfoResponse createDeviceInfoResponse() {
+        return new DeviceInfoResponse();
     }
 
     /**
-     * Create an instance of {@link GreetMeSometime }
+     * Create an instance of {@link DeviceInfo }
      * 
      */
-    public GreetMeSometime createGreetMeSometime() {
-        return new GreetMeSometime();
+    public DeviceInfo createDeviceInfo() {
+        return new DeviceInfo();
     }
 
 }

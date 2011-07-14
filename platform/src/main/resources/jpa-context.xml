@@ -21,7 +21,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd http://www.springfr
 
     <jdbc:initialize-database data-source="dataSource" enabled="true">
         <jdbc:script location="classpath:db-schema.sql"/>
-        <jdbc:script location="classpath:db-test-data.sql"/>
+<!--        <jdbc:script location="classpath:db-test-data.sql"/>-->
     </jdbc:initialize-database>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">

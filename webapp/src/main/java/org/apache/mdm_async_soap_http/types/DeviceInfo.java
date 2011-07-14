@@ -1,5 +1,5 @@
 
-package org.apache.hello_world_async_soap_http.types;
+package org.apache.mdm_async_soap_http.types;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="responseType" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="requestType" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,36 +29,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "responseType"
+    "requestType"
 })
-@XmlRootElement(name = "greetMeSometimeResponse")
-public class GreetMeSometimeResponse {
+@XmlRootElement(name = "deviceInfo")
+public class DeviceInfo {
 
     @XmlElement(required = true)
-    protected String responseType;
+    protected String requestType;
 
     /**
-     * Gets the value of the responseType property.
+     * Gets the value of the requestType property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getResponseType() {
-        return responseType;
+    public String getRequestType() {
+        return requestType;
     }
 
     /**
-     * Sets the value of the responseType property.
+     * Sets the value of the requestType property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setResponseType(String value) {
-        this.responseType = value;
+    public void setRequestType(String value) {
+        this.requestType = value;
     }
 
 }

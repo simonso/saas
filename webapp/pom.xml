@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>saas</artifactId>
-        <groupId>com.innopath</groupId>
+        <groupId>com.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.innopath</groupId>
+    <groupId>com.example</groupId>
     <artifactId>saas-webapp</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -21,6 +21,8 @@
         <pluginManagement>
             <plugins>
 
+                <!-- this plugin doesn't seem to work.
+                use command line to generate! -->
                 <plugin>
                     <groupId>org.apache.cxf</groupId>
                     <artifactId>cxf-codegen-plugin</artifactId>
@@ -32,10 +34,16 @@
                             <configuration>
                                 <wsdlOptions>
                                     <wsdlOption>
-                                        <wsdl>${basedir}/src/main/resources/hello_world_async.wsdl</wsdl>
+                                        <wsdl>${basedir}/src/main/resources/mdm_async.wsdl</wsdl>
                                         <extraargs>
                                             <extraarg>-b</extraarg>
                                             <extraarg>${basedir}/src/main/resources/async_binding.xml</extraarg>
+                                            <extraarg>-frontend</extraarg>
+                                            <extraarg>jaxws21</extraarg>
+                                            <extraarg>-d</extraarg>
+                                            <extraarg>${basedir}/src/main/java</extraarg>
+                                            <extraarg>-server</extraarg>
+                                            <extraarg>-impl</extraarg>
                                         </extraargs>
                                     </wsdlOption>
                                 </wsdlOptions>
@@ -76,7 +84,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.innopath</groupId>
+            <groupId>com.example</groupId>
             <artifactId>saas-platform</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>jar</type>

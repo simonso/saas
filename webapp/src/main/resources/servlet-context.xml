@@ -11,12 +11,12 @@
     <import resource="classpath:service-context.xml"/>
 
     <jaxws:endpoint
-        id="greeterAsync"
-        implementor="#greeter"
-        address="/GreeterAsync">
+        id="deviceEnrollmentAsync"
+        implementor="#deviceEnrollment"
+        address="/DeviceEnrollmentAsync">
     </jaxws:endpoint>
 
-    <bean id="greeter" class="com.example.hosted.GreeterImpl">
+    <bean id="deviceEnrollment" class="com.example.hosted.impl.DeviceEnrollmentImpl">
         <property name="deviceInfoService" ref="deviceInfoService"/>
     </bean>
 </beans>
