@@ -18,13 +18,25 @@
   under the License.
 -->
 
-<wsdl:definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://apache.org/mdm_async_soap_http" xmlns:x1="http://apache.org/mdm_async_soap_http/types" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://apache.org/mdm_async_soap_http" name="MDM">
+<wsdl:definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                  xmlns:tns="http://example.com/saas/services/device" xmlns:x1="http://example.com/saas/services/device/types"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                  targetNamespace="http://example.com/saas/services/device" name="MDM">
     <wsdl:types>
-        <schema targetNamespace="http://apache.org/mdm_async_soap_http/types" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:x1="http://apache.org/mdm_async_soap_http/types" elementFormDefault="qualified">
+        <schema targetNamespace="http://example.com/saas/services/device/types" xmlns="http://www.w3.org/2001/XMLSchema"
+                xmlns:x1="http://example.com/saas/services/device/types" elementFormDefault="qualified">
             <element name="deviceInfo">
                 <complexType>
                     <sequence>
-                        <element name="requestType" type="xsd:string"/>
+                        <element name="udid" type="xsd:string"/>
+                        <element name="deviceName" type="xsd:string"/>
+                        <element name="iosVersion" type="xsd:string"/>
+                        <element name="iosBuild" type="xsd:string"/>
+                        <element name="modelName" type="xsd:string"/>
+                        <element name="modelNumber" type="xsd:string"/>
+                        <element name="serialNumber" type="xsd:string"/>
+                        <element name="imei" type="xsd:string"/>
+                        <element name="modemFirmware" type="xsd:string"/>
                     </sequence>
                 </complexType>
             </element>
@@ -44,14 +56,14 @@
         <wsdl:part name="out" element="x1:deviceInfoResponse"/>
     </wsdl:message>
     <wsdl:portType name="DeviceEnrollment">
-        <wsdl:operation name="deviceInfo">
+        <wsdl:operation name="enrollDevice">
             <wsdl:input name="deviceInfoRequest" message="tns:deviceInfoRequest"/>
             <wsdl:output name="deviceInfoResponse" message="tns:deviceInfoResponse"/>
         </wsdl:operation>
     </wsdl:portType>
     <wsdl:binding name="DeviceEnrollment_SOAPBinding" type="tns:DeviceEnrollment">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <wsdl:operation name="deviceInfo">
+        <wsdl:operation name="enrollDevice">
             <soap:operation style="document"/>
             <wsdl:input>
                 <soap:body use="literal"/>

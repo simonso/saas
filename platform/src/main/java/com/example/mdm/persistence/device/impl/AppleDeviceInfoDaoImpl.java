@@ -2,10 +2,12 @@ package com.example.mdm.persistence.device.impl;
 
 import com.example.mdm.persistence.device.AppleDeviceInfo;
 import com.example.mdm.persistence.device.AppleDeviceInfoDao;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+@Transactional
 public class AppleDeviceInfoDaoImpl implements AppleDeviceInfoDao {
 
     @PersistenceContext

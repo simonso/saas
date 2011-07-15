@@ -16,7 +16,7 @@
         address="/DeviceEnrollmentAsync">
     </jaxws:endpoint>
 
-    <bean id="deviceEnrollment" class="com.example.hosted.impl.DeviceEnrollmentImpl">
+    <bean id="deviceEnrollment" class="com.example.saas.services.device.DeviceEnrollmentImpl">
         <property name="deviceInfoService" ref="deviceInfoService"/>
     </bean>
 </beans>

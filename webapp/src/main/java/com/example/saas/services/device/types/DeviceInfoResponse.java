@@ -1,5 +1,5 @@
 
-package org.apache.mdm_async_soap_http.types;
+package com.example.saas.services.device.types;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

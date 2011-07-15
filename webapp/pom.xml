@@ -42,6 +42,8 @@
                                             <extraarg>jaxws21</extraarg>
                                             <extraarg>-d</extraarg>
                                             <extraarg>${basedir}/src/main/java</extraarg>
+                                            <extraarg>-wsdlLocation</extraarg>
+                                            <extraarg>mdm_async.wsdl</extraarg>
                                             <extraarg>-server</extraarg>
                                             <extraarg>-impl</extraarg>
                                         </extraargs>
@@ -81,6 +83,12 @@
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-transports-http</artifactId>
             <version>2.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.8.3</version>
         </dependency>
 
         <dependency>

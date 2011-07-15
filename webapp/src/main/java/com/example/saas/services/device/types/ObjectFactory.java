@@ -1,5 +1,5 @@
 
-package org.apache.mdm_async_soap_http.types;
+package com.example.saas.services.device.types;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the org.apache.mdm_async_soap_http.types package. 
+ * generated in the com.example.saas.services.device.types package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -23,7 +23,7 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.apache.mdm_async_soap_http.types
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.example.saas.services.device.types
      * 
      */
     public ObjectFactory() {
